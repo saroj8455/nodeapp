@@ -52,12 +52,12 @@ app.use(logger);
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.status(200);
-  if (req.accepts('html')) {
-    res.sendFile(path.join(path.resolve(), 'views', 'health.html'));
-  } else {
-    res.json({ message: 'Health check done' });
-  }
+  // res.status(200);
+  // if (req.accepts('html')) {
+  //   res.sendFile(path.join(path.resolve(), 'views', 'health.html'));
+  // } else {
+  res.json({ message: 'Health check done' });
+  // }
 });
 
 // handel 404
